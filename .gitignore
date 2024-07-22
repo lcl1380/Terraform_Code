@@ -1,0 +1,6 @@
+# .terraform 폴더와 특정 파일들을 Git에서 제외
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+terraform.tfvats
