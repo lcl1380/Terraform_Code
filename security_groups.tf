@@ -9,12 +9,13 @@ resource "aws_security_group" "default" {
     cidr_blocks = ["0.0.0.0/0"] 
   }
 
-  // ingress { // SSH 포트 22 개방
-  //   from_port   = 22
-  //   to_port     = 22
-  //   protocol    = "tcp"
-  //   cidr_blocks = ["0.0.0.0/0"] 
-  // }
+  ingress { // SSH 포트 22 개방
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["114.70.38.239/32", "211.205.129.90/32"] 
+    description = "For_Labtop and For_Desktop(Port 22)"
+  }
 
   ingress { // SSH 22 -> 51228로 수정
     from_port   = 51228
@@ -44,12 +45,13 @@ resource "aws_security_group" "default" {
 resource "aws_security_group" "jenkins" {
   vpc_id = aws_vpc.KDT_Project2.id
 
-  // ingress { // SSH 포트 22 개방
-  //   from_port   = 22
-  //   to_port     = 22
-  //   protocol    = "tcp"
-  //   cidr_blocks = ["0.0.0.0/0"] 
-  // }
+  ingress { // SSH 포트 22 개방
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["114.70.38.239/32", "211.205.129.90/32"] 
+    description = "For_Labtop and For_Desktop(Port 22)"
+  }
 
   ingress { // 51228 포트 개방
     from_port   = 51228
@@ -86,6 +88,14 @@ resource "aws_security_group" "jenkins" {
 resource "aws_security_group" "private" {
   vpc_id = aws_vpc.KDT_Project2.id
 
+  ingress { // SSH 포트 22 개방
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["114.70.38.239/32", "211.205.129.90/32"] 
+    description = "For_Labtop and For_Desktop(Port 22)"
+  }
+
   egress { // 모든 아웃바운드 트래픽 허용
     from_port   = 0
     to_port     = 0
@@ -107,6 +117,14 @@ resource "aws_security_group" "private" {
 // DB용 보안 그룹 생성
 resource "aws_security_group" "db" {
   vpc_id = aws_vpc.KDT_Project2.id
+
+  ingress { // SSH 포트 22 개방
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["114.70.38.239/32", "211.205.129.90/32"] 
+    description = "For_Labtop and For_Desktop(Port 22)"
+  }
 
   egress { // 모든 아웃바운드 트래픽 허용
     from_port   = 0
