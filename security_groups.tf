@@ -92,7 +92,7 @@ resource "aws_security_group" "private" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["114.70.38.239/32", "211.205.129.90/32"] 
+    cidr_blocks = ["10.0.1.0/24", "10.0.4.0/24"] // Public 서브넷의 내부 IP CIDR 블록으로 Public에서만 오는 SSH 요청 허용 : 10.0.1.0 ~ 10.0.1.255
     description = "For_Labtop and For_Desktop(Port 22)"
   }
 
@@ -122,7 +122,7 @@ resource "aws_security_group" "db" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["114.70.38.239/32", "211.205.129.90/32"] 
+    cidr_blocks = ["10.0.1.0/24", "10.0.4.0/24"] // Public 서브넷의 내부 IP CIDR 블록으로 Public에서만 오는 SSH 요청 허용 : 10.0.1.0 ~ 10.0.1.255
     description = "For_Labtop and For_Desktop(Port 22)"
   }
 
@@ -149,7 +149,7 @@ resource "aws_security_group_rule" "private_ssh" {
   from_port         = 51228
   to_port           = 51228
   protocol          = "tcp"
-  cidr_blocks       = ["10.0.1.0/24", "10.0.4.0/24"] // Public 서브넷의 내부 IP CIDR 블록으로 Public에서만 오는 SSH 요청 허용.
+  cidr_blocks       = ["10.0.1.0/24", "10.0.4.0/24"] // Public 서브넷의 내부 IP CIDR 블록으로 Public에서만 오는 SSH 요청 허용  : 10.0.1.0 ~ 10.0.1.255
   security_group_id = aws_security_group.private.id
 }
 
@@ -181,6 +181,6 @@ resource "aws_security_group_rule" "db_ssh" {
   from_port         = 51228
   to_port           = 51228
   protocol          = "tcp"
-  cidr_blocks       = ["10.0.1.0/24", "10.0.4.0/24"] // Public 서브넷의 내부 IP CIDR 블록으로 Public에서만 오는 SSH 요청 허용.
+  cidr_blocks       = ["10.0.1.0/24", "10.0.4.0/24"] // Public 서브넷의 내부 IP CIDR 블록으로 Public에서만 오는 SSH 요청 허용 : 10.0.1.0 ~ 10.0.1.255
   security_group_id = aws_security_group.db.id
 }
