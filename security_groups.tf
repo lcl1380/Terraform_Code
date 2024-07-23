@@ -9,12 +9,12 @@ resource "aws_security_group" "default" {
     cidr_blocks = ["0.0.0.0/0"] 
   }
 
-  // ingress { // SSH 포트 22 개방
-  //   from_port   = 22
-  //   to_port     = 22
-  //   protocol    = "tcp"
-  //   cidr_blocks = ["0.0.0.0/0"] 
-  // }
+  ingress { // SSH 포트 22 개방
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"] 
+  }
 
   ingress { // SSH 22 -> 51228로 수정
     from_port   = 51228
@@ -44,12 +44,12 @@ resource "aws_security_group" "default" {
 resource "aws_security_group" "jenkins" {
   vpc_id = aws_vpc.KDT_Project2.id
 
-  // ingress { // SSH 포트 22 개방
-  //   from_port   = 22
-  //   to_port     = 22
-  //   protocol    = "tcp"
-  //   cidr_blocks = ["0.0.0.0/0"] 
-  // }
+  ingress { // SSH 포트 22 개방
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"] 
+  }
 
   ingress { // 51228 포트 개방
     from_port   = 51228
@@ -86,12 +86,12 @@ resource "aws_security_group" "jenkins" {
 resource "aws_security_group" "private" {
   vpc_id = aws_vpc.KDT_Project2.id
 
-  // ingress { // SSH 포트 22 개방
-  //   from_port   = 22
-  //   to_port     = 22
-  //   protocol    = "tcp"
-  //   cidr_blocks = ["0.0.0.0/0"] 
-  // }
+  ingress { // SSH 포트 22 개방
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"] 
+  }
 
   ingress { // 51228 포트 개방
     from_port   = 51228
@@ -100,12 +100,12 @@ resource "aws_security_group" "private" {
     cidr_blocks = ["0.0.0.0/0"] 
   }
 
-  // ingress { // 포트 8080 개방
-  //   from_port   = 8080
-  //   to_port     = 8080
-  //   protocol    = "tcp"
-  //   cidr_blocks = ["0.0.0.0/0"] 
-  // }
+  ingress { // 포트 8080 개방
+    from_port   = 8080
+    to_port     = 8080
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"] 
+  }
 
   ingress { // MySQL 포트 3306 개방
     from_port   = 3306
@@ -134,19 +134,19 @@ resource "aws_security_group" "private" {
 resource "aws_security_group" "db" {
   vpc_id = aws_vpc.KDT_Project2.id
 
-  ingress { // Private-SecurityGroup으로부터의 MySQL 포트 3306 개방
+  ingress { // Private-SecurityGroup과 Default-SecurityGroup으로부터의 MySQL 포트 3306 개방
     from_port   = 3306
     to_port     = 3306
     protocol    = "tcp"
-    security_groups = [aws_security_group.private.id] 
+    security_groups = [aws_security_group.private.id, aws_security_group.default.id]
   }
 
-  // ingress { // SSH 포트 22 개방 -> Setting 용도.
-  //   from_port   = 22
-  //   to_port     = 22
-  //   protocol    = "tcp"
-  //   cidr_blocks = ["0.0.0.0/0"] 
-  // }
+  ingress { // SSH 포트 22 개방 -> Setting 용도.
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"] 
+  }
 
   ingress { // SSH 포트 51228 개방 -> Setting 용도.
     from_port   = 51228

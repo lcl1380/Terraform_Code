@@ -1,0 +1,989 @@
+{
+  "aggregate": {
+    "counters": {
+      "vusers.created_by_name.Thymeleaf Pages": 6420,
+      "vusers.created": 19200,
+      "http.requests": 19200,
+      "vusers.created_by_name.User Sign Up and Login": 6328,
+      "vusers.created_by_name.Manage Products": 6452,
+      "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 6414,
+      "errors.ETIMEDOUT": 19186,
+      "vusers.failed": 19200,
+      "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 6325,
+      "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 6447,
+      "plugins.metrics-by-endpoint./users/signup.errors.ECONNRESET": 3,
+      "errors.ECONNRESET": 14,
+      "plugins.metrics-by-endpoint./products.errors.ECONNRESET": 5,
+      "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ECONNRESET": 6
+    },
+    "rates": {
+      "http.request_rate": 56
+    },
+    "firstCounterAt": 1721721383313,
+    "lastCounterAt": 1721721752952,
+    "firstMetricAt": 1721721383313,
+    "lastMetricAt": 1721721752952,
+    "period": 1721721750000,
+    "summaries": {},
+    "histograms": {}
+  },
+  "intermediate": [
+    {
+      "counters": {
+        "vusers.created_by_name.Thymeleaf Pages": 22,
+        "vusers.created": 70,
+        "http.requests": 70,
+        "vusers.created_by_name.User Sign Up and Login": 26,
+        "vusers.created_by_name.Manage Products": 22
+      },
+      "rates": {
+        "http.request_rate": 10
+      },
+      "firstCounterAt": 1721721383313,
+      "lastCounterAt": 1721721389875,
+      "firstMetricAt": 1721721383313,
+      "lastMetricAt": 1721721389875,
+      "period": "1721721380000",
+      "http.request_rate": null,
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.User Sign Up and Login": 34,
+        "vusers.created": 100,
+        "http.requests": 100,
+        "vusers.created_by_name.Thymeleaf Pages": 33,
+        "vusers.created_by_name.Manage Products": 33,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 22,
+        "errors.ETIMEDOUT": 70,
+        "vusers.failed": 70,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 26,
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 22
+      },
+      "rates": {
+        "http.request_rate": 10
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721390312,
+      "lastCounterAt": 1721721399875,
+      "firstMetricAt": 1721721390312,
+      "lastMetricAt": 1721721399875,
+      "period": "1721721390000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.User Sign Up and Login": 39,
+        "vusers.created": 100,
+        "http.requests": 100,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 34,
+        "errors.ETIMEDOUT": 100,
+        "vusers.failed": 100,
+        "vusers.created_by_name.Manage Products": 31,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 33,
+        "vusers.created_by_name.Thymeleaf Pages": 30,
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 33
+      },
+      "rates": {
+        "http.request_rate": 10
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721400312,
+      "lastCounterAt": 1721721409875,
+      "firstMetricAt": 1721721400312,
+      "lastMetricAt": 1721721409875,
+      "period": "1721721400000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.User Sign Up and Login": 24,
+        "vusers.created": 100,
+        "http.requests": 100,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 39,
+        "errors.ETIMEDOUT": 100,
+        "vusers.failed": 100,
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 31,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 30,
+        "vusers.created_by_name.Manage Products": 47,
+        "vusers.created_by_name.Thymeleaf Pages": 29
+      },
+      "rates": {
+        "http.request_rate": 10
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721410312,
+      "lastCounterAt": 1721721419875,
+      "firstMetricAt": 1721721410312,
+      "lastMetricAt": 1721721419875,
+      "period": "1721721410000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 24,
+        "errors.ETIMEDOUT": 100,
+        "vusers.failed": 100,
+        "vusers.created_by_name.Thymeleaf Pages": 32,
+        "vusers.created": 100,
+        "http.requests": 100,
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 47,
+        "vusers.created_by_name.Manage Products": 44,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 29,
+        "vusers.created_by_name.User Sign Up and Login": 24
+      },
+      "rates": {
+        "http.request_rate": 10
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721420312,
+      "lastCounterAt": 1721721429875,
+      "firstMetricAt": 1721721420312,
+      "lastMetricAt": 1721721429875,
+      "period": "1721721420000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 32,
+        "errors.ETIMEDOUT": 100,
+        "vusers.failed": 100,
+        "vusers.created_by_name.User Sign Up and Login": 34,
+        "vusers.created": 100,
+        "http.requests": 100,
+        "vusers.created_by_name.Manage Products": 31,
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 44,
+        "vusers.created_by_name.Thymeleaf Pages": 35,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 24
+      },
+      "rates": {
+        "http.request_rate": 10
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721430312,
+      "lastCounterAt": 1721721439875,
+      "firstMetricAt": 1721721430312,
+      "lastMetricAt": 1721721439875,
+      "period": "1721721430000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.User Sign Up and Login": 33,
+        "vusers.created": 100,
+        "http.requests": 100,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 34,
+        "errors.ETIMEDOUT": 100,
+        "vusers.failed": 100,
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 31,
+        "vusers.created_by_name.Manage Products": 37,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 35,
+        "vusers.created_by_name.Thymeleaf Pages": 30
+      },
+      "rates": {
+        "http.request_rate": 10
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721440312,
+      "lastCounterAt": 1721721449874,
+      "firstMetricAt": 1721721440312,
+      "lastMetricAt": 1721721449874,
+      "period": "1721721440000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 33,
+        "errors.ETIMEDOUT": 100,
+        "vusers.failed": 100,
+        "vusers.created_by_name.Thymeleaf Pages": 35,
+        "vusers.created": 100,
+        "http.requests": 100,
+        "vusers.created_by_name.User Sign Up and Login": 28,
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 37,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 30,
+        "vusers.created_by_name.Manage Products": 37
+      },
+      "rates": {
+        "http.request_rate": 10
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721450311,
+      "lastCounterAt": 1721721459874,
+      "firstMetricAt": 1721721450311,
+      "lastMetricAt": 1721721459874,
+      "period": "1721721450000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 35,
+        "errors.ETIMEDOUT": 100,
+        "vusers.failed": 100,
+        "vusers.created_by_name.Manage Products": 32,
+        "vusers.created": 100,
+        "http.requests": 100,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 28,
+        "vusers.created_by_name.Thymeleaf Pages": 35,
+        "vusers.created_by_name.User Sign Up and Login": 33,
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 37
+      },
+      "rates": {
+        "http.request_rate": 10
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721460311,
+      "lastCounterAt": 1721721469874,
+      "firstMetricAt": 1721721460311,
+      "lastMetricAt": 1721721469874,
+      "period": "1721721460000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.Manage Products": 40,
+        "vusers.created": 100,
+        "http.requests": 100,
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 32,
+        "errors.ETIMEDOUT": 100,
+        "vusers.failed": 100,
+        "vusers.created_by_name.Thymeleaf Pages": 35,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 35,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 33,
+        "vusers.created_by_name.User Sign Up and Login": 25
+      },
+      "rates": {
+        "http.request_rate": 10
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721470311,
+      "lastCounterAt": 1721721479874,
+      "firstMetricAt": 1721721470311,
+      "lastMetricAt": 1721721479874,
+      "period": "1721721470000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 40,
+        "errors.ETIMEDOUT": 100,
+        "vusers.failed": 100,
+        "vusers.created_by_name.Manage Products": 27,
+        "vusers.created": 100,
+        "http.requests": 100,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 35,
+        "vusers.created_by_name.Thymeleaf Pages": 39,
+        "vusers.created_by_name.User Sign Up and Login": 34,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 25
+      },
+      "rates": {
+        "http.request_rate": 10
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721480311,
+      "lastCounterAt": 1721721489874,
+      "firstMetricAt": 1721721480311,
+      "lastMetricAt": 1721721489874,
+      "period": "1721721480000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 27,
+        "errors.ETIMEDOUT": 100,
+        "vusers.failed": 100,
+        "vusers.created_by_name.Manage Products": 41,
+        "vusers.created": 100,
+        "http.requests": 100,
+        "vusers.created_by_name.Thymeleaf Pages": 33,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 39,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 34,
+        "vusers.created_by_name.User Sign Up and Login": 26
+      },
+      "rates": {
+        "http.request_rate": 10
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721490311,
+      "lastCounterAt": 1721721499874,
+      "firstMetricAt": 1721721490311,
+      "lastMetricAt": 1721721499874,
+      "period": "1721721490000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.Manage Products": 133,
+        "vusers.created": 395,
+        "http.requests": 395,
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 41,
+        "errors.ETIMEDOUT": 100,
+        "vusers.failed": 100,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 33,
+        "vusers.created_by_name.User Sign Up and Login": 107,
+        "vusers.created_by_name.Thymeleaf Pages": 155,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 26
+      },
+      "rates": {
+        "http.request_rate": 40
+      },
+      "firstCounterAt": 1721721500311,
+      "lastCounterAt": 1721721509999,
+      "firstMetricAt": 1721721500311,
+      "lastMetricAt": 1721721509999,
+      "period": "1721721500000",
+      "http.request_rate": null,
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.Thymeleaf Pages": 169,
+        "vusers.created": 500,
+        "http.requests": 500,
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 132,
+        "errors.ETIMEDOUT": 394,
+        "vusers.failed": 394,
+        "vusers.created_by_name.Manage Products": 159,
+        "vusers.created_by_name.User Sign Up and Login": 172,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 107,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 155
+      },
+      "rates": {
+        "http.request_rate": 50
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721510024,
+      "lastCounterAt": 1721721519999,
+      "firstMetricAt": 1721721510024,
+      "lastMetricAt": 1721721519999,
+      "period": "1721721510000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.User Sign Up and Login": 167,
+        "vusers.created": 500,
+        "http.requests": 500,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 169,
+        "errors.ETIMEDOUT": 500,
+        "vusers.failed": 500,
+        "vusers.created_by_name.Manage Products": 167,
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 160,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 171,
+        "vusers.created_by_name.Thymeleaf Pages": 166
+      },
+      "rates": {
+        "http.request_rate": 50
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721520000,
+      "lastCounterAt": 1721721529999,
+      "firstMetricAt": 1721721520000,
+      "lastMetricAt": 1721721529999,
+      "period": "1721721520000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.User Sign Up and Login": 171,
+        "vusers.created": 500,
+        "http.requests": 500,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 167,
+        "errors.ETIMEDOUT": 500,
+        "vusers.failed": 500,
+        "vusers.created_by_name.Thymeleaf Pages": 158,
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 167,
+        "vusers.created_by_name.Manage Products": 171,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 166
+      },
+      "rates": {
+        "http.request_rate": 50
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721530000,
+      "lastCounterAt": 1721721539999,
+      "firstMetricAt": 1721721530000,
+      "lastMetricAt": 1721721539999,
+      "period": "1721721530000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.User Sign Up and Login": 162,
+        "vusers.created": 500,
+        "http.requests": 500,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 172,
+        "errors.ETIMEDOUT": 501,
+        "vusers.failed": 501,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 158,
+        "vusers.created_by_name.Manage Products": 177,
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 171,
+        "vusers.created_by_name.Thymeleaf Pages": 161
+      },
+      "rates": {
+        "http.request_rate": 50
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721540000,
+      "lastCounterAt": 1721721549999,
+      "firstMetricAt": 1721721540000,
+      "lastMetricAt": 1721721549999,
+      "period": "1721721540000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.Manage Products": 165,
+        "vusers.created": 500,
+        "http.requests": 500,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 161,
+        "errors.ETIMEDOUT": 499,
+        "vusers.failed": 499,
+        "vusers.created_by_name.User Sign Up and Login": 151,
+        "vusers.created_by_name.Thymeleaf Pages": 184,
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 177,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 161
+      },
+      "rates": {
+        "http.request_rate": 50
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721550024,
+      "lastCounterAt": 1721721559999,
+      "firstMetricAt": 1721721550024,
+      "lastMetricAt": 1721721559999,
+      "period": "1721721550000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.Manage Products": 167,
+        "vusers.created": 500,
+        "http.requests": 500,
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 165,
+        "errors.ETIMEDOUT": 501,
+        "vusers.failed": 501,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 152,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 184,
+        "vusers.created_by_name.Thymeleaf Pages": 166,
+        "vusers.created_by_name.User Sign Up and Login": 167
+      },
+      "rates": {
+        "http.request_rate": 50
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721560000,
+      "lastCounterAt": 1721721569999,
+      "firstMetricAt": 1721721560000,
+      "lastMetricAt": 1721721569999,
+      "period": "1721721560000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.Manage Products": 157,
+        "vusers.created": 500,
+        "http.requests": 500,
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 167,
+        "errors.ETIMEDOUT": 500,
+        "vusers.failed": 500,
+        "vusers.created_by_name.User Sign Up and Login": 176,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 166,
+        "vusers.created_by_name.Thymeleaf Pages": 167,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 167
+      },
+      "rates": {
+        "http.request_rate": 50
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721570023,
+      "lastCounterAt": 1721721579999,
+      "firstMetricAt": 1721721570023,
+      "lastMetricAt": 1721721579999,
+      "period": "1721721570000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.User Sign Up and Login": 150,
+        "vusers.created": 500,
+        "http.requests": 500,
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 157,
+        "errors.ETIMEDOUT": 500,
+        "vusers.failed": 500,
+        "vusers.created_by_name.Manage Products": 183,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 176,
+        "vusers.created_by_name.Thymeleaf Pages": 167,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 167
+      },
+      "rates": {
+        "http.request_rate": 50
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721580023,
+      "lastCounterAt": 1721721589999,
+      "firstMetricAt": 1721721580023,
+      "lastMetricAt": 1721721589999,
+      "period": "1721721580000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.Manage Products": 160,
+        "vusers.created": 500,
+        "http.requests": 500,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 150,
+        "errors.ETIMEDOUT": 500,
+        "vusers.failed": 500,
+        "vusers.created_by_name.Thymeleaf Pages": 167,
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 183,
+        "vusers.created_by_name.User Sign Up and Login": 173,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 167
+      },
+      "rates": {
+        "http.request_rate": 50
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721590023,
+      "lastCounterAt": 1721721599999,
+      "firstMetricAt": 1721721590023,
+      "lastMetricAt": 1721721599999,
+      "period": "1721721590000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.Thymeleaf Pages": 180,
+        "vusers.created": 500,
+        "http.requests": 500,
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 160,
+        "errors.ETIMEDOUT": 500,
+        "vusers.failed": 500,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 167,
+        "vusers.created_by_name.User Sign Up and Login": 168,
+        "vusers.created_by_name.Manage Products": 152,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 173
+      },
+      "rates": {
+        "http.request_rate": 50
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721600023,
+      "lastCounterAt": 1721721609999,
+      "firstMetricAt": 1721721600023,
+      "lastMetricAt": 1721721609999,
+      "period": "1721721600000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.Thymeleaf Pages": 160,
+        "vusers.created": 500,
+        "http.requests": 500,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 180,
+        "errors.ETIMEDOUT": 500,
+        "vusers.failed": 500,
+        "vusers.created_by_name.User Sign Up and Login": 179,
+        "vusers.created_by_name.Manage Products": 161,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 168,
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 152
+      },
+      "rates": {
+        "http.request_rate": 50
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721610023,
+      "lastCounterAt": 1721721619999,
+      "firstMetricAt": 1721721610023,
+      "lastMetricAt": 1721721619999,
+      "period": "1721721610000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.Thymeleaf Pages": 322,
+        "vusers.created": 867,
+        "http.requests": 867,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 160,
+        "errors.ETIMEDOUT": 499,
+        "vusers.failed": 499,
+        "vusers.created_by_name.User Sign Up and Login": 276,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 178,
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 161,
+        "vusers.created_by_name.Manage Products": 269
+      },
+      "rates": {
+        "http.request_rate": 89
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721620023,
+      "lastCounterAt": 1721721629993,
+      "firstMetricAt": 1721721620023,
+      "lastMetricAt": 1721721629993,
+      "period": "1721721620000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.Thymeleaf Pages": 313,
+        "vusers.created": 1000,
+        "http.requests": 1000,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 322,
+        "errors.ETIMEDOUT": 868,
+        "vusers.failed": 871,
+        "vusers.created_by_name.Manage Products": 330,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 277,
+        "vusers.created_by_name.User Sign Up and Login": 357,
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 269,
+        "plugins.metrics-by-endpoint./users/signup.errors.ECONNRESET": 1,
+        "errors.ECONNRESET": 3,
+        "plugins.metrics-by-endpoint./products.errors.ECONNRESET": 2
+      },
+      "rates": {
+        "http.request_rate": 100
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721630006,
+      "lastCounterAt": 1721721639993,
+      "firstMetricAt": 1721721630006,
+      "lastMetricAt": 1721721639993,
+      "period": "1721721630000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 313,
+        "errors.ETIMEDOUT": 997,
+        "vusers.failed": 997,
+        "vusers.created_by_name.User Sign Up and Login": 290,
+        "vusers.created": 1000,
+        "http.requests": 1000,
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 328,
+        "vusers.created_by_name.Thymeleaf Pages": 363,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 356,
+        "vusers.created_by_name.Manage Products": 347
+      },
+      "rates": {
+        "http.request_rate": 100
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721640007,
+      "lastCounterAt": 1721721649993,
+      "firstMetricAt": 1721721640007,
+      "lastMetricAt": 1721721649993,
+      "period": "1721721640000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 290,
+        "errors.ETIMEDOUT": 1000,
+        "vusers.failed": 1001,
+        "vusers.created_by_name.Manage Products": 334,
+        "vusers.created": 1000,
+        "http.requests": 1000,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 363,
+        "vusers.created_by_name.Thymeleaf Pages": 310,
+        "vusers.created_by_name.User Sign Up and Login": 356,
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 347,
+        "plugins.metrics-by-endpoint./users/signup.errors.ECONNRESET": 1,
+        "errors.ECONNRESET": 1
+      },
+      "rates": {
+        "http.request_rate": 100
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721650007,
+      "lastCounterAt": 1721721659993,
+      "firstMetricAt": 1721721650007,
+      "lastMetricAt": 1721721659993,
+      "period": "1721721650000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 334,
+        "errors.ETIMEDOUT": 999,
+        "vusers.failed": 999,
+        "vusers.created_by_name.Thymeleaf Pages": 331,
+        "vusers.created": 1000,
+        "http.requests": 1000,
+        "vusers.created_by_name.Manage Products": 366,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 310,
+        "vusers.created_by_name.User Sign Up and Login": 303,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 355
+      },
+      "rates": {
+        "http.request_rate": 100
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721660007,
+      "lastCounterAt": 1721721669993,
+      "firstMetricAt": 1721721660007,
+      "lastMetricAt": 1721721669993,
+      "period": "1721721660000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 331,
+        "errors.ETIMEDOUT": 1000,
+        "vusers.failed": 1003,
+        "vusers.created_by_name.Thymeleaf Pages": 344,
+        "vusers.created": 1000,
+        "http.requests": 1000,
+        "vusers.created_by_name.Manage Products": 318,
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 366,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 303,
+        "vusers.created_by_name.User Sign Up and Login": 338,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ECONNRESET": 2,
+        "errors.ECONNRESET": 3,
+        "plugins.metrics-by-endpoint./products.errors.ECONNRESET": 1
+      },
+      "rates": {
+        "http.request_rate": 100
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721670007,
+      "lastCounterAt": 1721721679993,
+      "firstMetricAt": 1721721670007,
+      "lastMetricAt": 1721721679993,
+      "period": "1721721670000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 342,
+        "errors.ETIMEDOUT": 997,
+        "vusers.failed": 998,
+        "vusers.created_by_name.Manage Products": 342,
+        "vusers.created": 1000,
+        "http.requests": 1000,
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 317,
+        "vusers.created_by_name.User Sign Up and Login": 347,
+        "plugins.metrics-by-endpoint./users/signup.errors.ECONNRESET": 1,
+        "errors.ECONNRESET": 1,
+        "vusers.created_by_name.Thymeleaf Pages": 311,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 338
+      },
+      "rates": {
+        "http.request_rate": 100
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721680007,
+      "lastCounterAt": 1721721689993,
+      "firstMetricAt": 1721721680007,
+      "lastMetricAt": 1721721689993,
+      "period": "1721721680000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 342,
+        "errors.ETIMEDOUT": 999,
+        "vusers.failed": 1000,
+        "vusers.created_by_name.Thymeleaf Pages": 326,
+        "vusers.created": 1000,
+        "http.requests": 1000,
+        "vusers.created_by_name.Manage Products": 337,
+        "vusers.created_by_name.User Sign Up and Login": 337,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 311,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 346,
+        "plugins.metrics-by-endpoint./products.errors.ECONNRESET": 1,
+        "errors.ECONNRESET": 1
+      },
+      "rates": {
+        "http.request_rate": 100
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721690007,
+      "lastCounterAt": 1721721699993,
+      "firstMetricAt": 1721721690007,
+      "lastMetricAt": 1721721699993,
+      "period": "1721721690000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 326,
+        "errors.ETIMEDOUT": 999,
+        "vusers.failed": 1000,
+        "vusers.created_by_name.Thymeleaf Pages": 348,
+        "vusers.created": 1000,
+        "http.requests": 1000,
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 336,
+        "vusers.created_by_name.Manage Products": 337,
+        "vusers.created_by_name.User Sign Up and Login": 315,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 337,
+        "plugins.metrics-by-endpoint./products.errors.ECONNRESET": 1,
+        "errors.ECONNRESET": 1
+      },
+      "rates": {
+        "http.request_rate": 100
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721700006,
+      "lastCounterAt": 1721721709993,
+      "firstMetricAt": 1721721700006,
+      "lastMetricAt": 1721721709993,
+      "period": "1721721700000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 348,
+        "errors.ETIMEDOUT": 999,
+        "vusers.failed": 1000,
+        "vusers.created_by_name.Manage Products": 346,
+        "vusers.created": 1000,
+        "http.requests": 1000,
+        "vusers.created_by_name.Thymeleaf Pages": 331,
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 336,
+        "vusers.created_by_name.User Sign Up and Login": 323,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 315,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ECONNRESET": 1,
+        "errors.ECONNRESET": 1
+      },
+      "rates": {
+        "http.request_rate": 100
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721710007,
+      "lastCounterAt": 1721721719993,
+      "firstMetricAt": 1721721710007,
+      "lastMetricAt": 1721721719993,
+      "period": "1721721710000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 346,
+        "errors.ETIMEDOUT": 999,
+        "vusers.failed": 1001,
+        "vusers.created_by_name.Manage Products": 321,
+        "vusers.created": 1000,
+        "http.requests": 1000,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 330,
+        "vusers.created_by_name.Thymeleaf Pages": 336,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 323,
+        "vusers.created_by_name.User Sign Up and Login": 343,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ECONNRESET": 2,
+        "errors.ECONNRESET": 2
+      },
+      "rates": {
+        "http.request_rate": 100
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721720006,
+      "lastCounterAt": 1721721729993,
+      "firstMetricAt": 1721721720006,
+      "lastMetricAt": 1721721729993,
+      "period": "1721721720000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 321,
+        "errors.ETIMEDOUT": 998,
+        "vusers.failed": 999,
+        "vusers.created_by_name.Manage Products": 332,
+        "vusers.created": 1000,
+        "http.requests": 1000,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 334,
+        "vusers.created_by_name.Thymeleaf Pages": 317,
+        "vusers.created_by_name.User Sign Up and Login": 351,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 343,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ECONNRESET": 1,
+        "errors.ECONNRESET": 1
+      },
+      "rates": {
+        "http.request_rate": 100
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721730007,
+      "lastCounterAt": 1721721739993,
+      "firstMetricAt": 1721721730007,
+      "lastMetricAt": 1721721739993,
+      "period": "1721721730000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 331,
+        "errors.ETIMEDOUT": 998,
+        "vusers.failed": 998,
+        "vusers.created_by_name.Manage Products": 99,
+        "vusers.created": 268,
+        "http.requests": 268,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 316,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 351,
+        "vusers.created_by_name.User Sign Up and Login": 89,
+        "vusers.created_by_name.Thymeleaf Pages": 80
+      },
+      "rates": {
+        "http.request_rate": 100
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1721721740006,
+      "lastCounterAt": 1721721749988,
+      "firstMetricAt": 1721721740006,
+      "lastMetricAt": 1721721749988,
+      "period": "1721721740000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "plugins.metrics-by-endpoint./products.errors.ETIMEDOUT": 100,
+        "errors.ETIMEDOUT": 269,
+        "vusers.failed": 269,
+        "plugins.metrics-by-endpoint./users/signup.errors.ETIMEDOUT": 89,
+        "plugins.metrics-by-endpoint./products-temp/thymeleaf/ex01.errors.ETIMEDOUT": 80
+      },
+      "rates": {},
+      "firstCounterAt": 1721721750004,
+      "lastCounterAt": 1721721752952,
+      "firstMetricAt": 1721721750004,
+      "lastMetricAt": 1721721752952,
+      "period": "1721721750000",
+      "summaries": {},
+      "histograms": {}
+    }
+  ]
+}

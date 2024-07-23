@@ -1,0 +1,61 @@
+config:
+  target: "http://3.36.224.179"
+  phases:
+    - duration: 120  # 2 minutes
+      arrivalRate: 10  # 원활 상황
+      name: "Normal load"
+    - duration: 120  # 2 minutes
+      arrivalRate: 50  # 한계 상황
+      name: "High load"
+    - duration: 120  # 2 minutes
+      arrivalRate: 100  # 터지는 상황
+      name: "Stress load"
+  payload:
+    - path: "users.csv"
+      fields:
+        - "username"
+        - "password"
+
+scenarios:
+  - name: "User Sign Up and Login"
+    flow:
+      - post:
+          url: "/users/signup"
+          json:
+            username: "${username}"
+            password: "${password}"
+      - post:
+          url: "/users/login"
+          json:
+            username: "${username}"
+            password: "${password}"
+
+  - name: "Manage Products"
+    flow:
+      - get:
+          url: "/products"
+      - post:
+          url: "/products"
+          json:
+            name: "Product ${randomInt(1, 10000)}"
+            price: ${randomInt(10, 1000)}
+      - get:
+          url: "/products/${productId}"
+      - put:
+          url: "/products/${productId}"
+          json:
+            name: "Updated Product ${randomInt(1, 10000)}"
+            price: ${randomInt(10, 1000)}
+      - delete:
+          url: "/products/${productId}"
+
+  - name: "Thymeleaf Pages"
+    flow:
+      - get:
+          url: "/products-temp/thymeleaf/ex01"
+      - get:
+          url: "/products-temp/thymeleaf/products-page"
+      - get:
+          url: "/products-temp/products-layout"
+      - get:
+          url: "/products-temp/products-pagenav"
