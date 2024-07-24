@@ -54,9 +54,6 @@ resource "aws_instance" "B_Public" {
               # nginx 가동 시작
               sudo systemctl start nginx
 
-              # OpenJDK 17 설치
-              sudo apt update -y
-              sudo apt install -y openjdk-17-jdk
               EOF
 }
 
@@ -90,9 +87,6 @@ resource "aws_instance" "B_Private01" {
               chmod 444 /home/ubuntu/KDT_Project2_AWS.pem
               echo "PEM 파일 생성 및 권한 설정 성공!" 
 
-              # OpenJDK 17 설치
-              sudo apt update -y
-              sudo apt install -y openjdk-17-jdk
               EOF
 }
 
@@ -120,9 +114,6 @@ resource "aws_instance" "B_Private02" {
               chmod 444 /home/ubuntu/KDT_Project2_AWS.pem
               echo "PEM 파일 생성 및 권한 설정 성공!" 
 
-              # OpenJDK 17 설치
-              sudo apt update -y
-              sudo apt install -y openjdk-17-jdk
               EOF
 }
 
@@ -159,10 +150,6 @@ resource "aws_instance" "B_Private03" {
 
               # MySQL root 유저 비밀번호 설정 및 사용자 생성
               sudo mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '51228';"
-              sudo mysql -e "CREATE USER 'cherish'@'%' IDENTIFIED BY '51228';"
-              sudo mysql -e "CREATE DATABASE spring_security_inclass;"
-              sudo mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'cherish'@'%';"
-              sudo mysql -e "FLUSH PRIVILEGES;"
 
               # MySQL 서비스 재시작
               sudo systemctl restart mysql

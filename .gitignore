@@ -3,4 +3,4 @@
 terraform.tfstate
 terraform.tfstate.backup
 terraform.tfvars
-Artillery_Test/
+# Artillery_Test/

@@ -131,10 +131,6 @@ resource "aws_instance" "A_Public" {
 
               # nginx 가동 시작
               sudo systemctl start nginx
-
-              # OpenJDK 17 설치
-              sudo apt update -y
-              sudo apt install -y openjdk-17-jdk
               EOF
 }
 
@@ -143,10 +139,7 @@ resource "aws_eip" "a_public_eip" {
   vpc      = true
 }
 
-
-
 /*------------------------------------------------------------------------------*/
-
 
 
 resource "aws_instance" "A_Private01" {
@@ -171,10 +164,6 @@ resource "aws_instance" "A_Private01" {
               echo "${var.key_pair_content}" > /home/ubuntu/KDT_Project2_AWS.pem
               chmod 444 /home/ubuntu/KDT_Project2_AWS.pem
               echo "PEM 파일 생성 및 권한 설정 성공!" 
-
-              # OpenJDK 17 설치
-              sudo apt update -y
-              sudo apt install -y openjdk-17-jdk
               EOF
 }
 
@@ -201,13 +190,34 @@ resource "aws_instance" "A_Private02" {
               chmod 444 /home/ubuntu/KDT_Project2_AWS.pem
               echo "PEM 파일 생성 및 권한 설정 성공!" 
 
-              # OpenJDK 17 설치
-              sudo apt update -y
-              sudo apt install -y openjdk-17-jdk
               EOF
 }
 
+resource "aws_instance" "A_Logging" { // 로깅 서버
+  ami           = "ami-056a29f2eddc40520"
+  instance_type = "t2.medium"
+  subnet_id     = aws_subnet.Private_A2.id
+  key_name      = "KDT_Project2_AWS"
 
+  vpc_security_group_ids = [aws_security_group.private.id]
+
+  tags = {
+    Name = "A_Logging"
+  }
+
+  user_data = <<-EOF
+              #!/bin/bash
+              # 호스트 이름 변경
+              hostnamectl set-hostname a-logging
+              echo "127.0.2.1 a-logging" >> /etc/hosts
+
+              # PEM 파일 생성 및 권한 설정
+              echo "${var.key_pair_content}" > /home/ubuntu/KDT_Project2_AWS.pem
+              chmod 444 /home/ubuntu/KDT_Project2_AWS.pem
+              echo "PEM 파일 생성 및 권한 설정 성공!" 
+
+              EOF
+}
 
 /*------------------------------------------------------------------------------*/
 
@@ -244,10 +254,6 @@ resource "aws_instance" "A_Private03" {
 
               # MySQL root 유저 비밀번호 설정 및 사용자 생성
               sudo mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '51228';"
-              sudo mysql -e "CREATE USER 'cherish'@'%' IDENTIFIED BY '51228';"
-              sudo mysql -e "CREATE DATABASE spring_security_inclass;"
-              sudo mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'cherish'@'%';"
-              sudo mysql -e "FLUSH PRIVILEGES;"
 
               # MySQL 서비스 재시작
               sudo systemctl restart mysql

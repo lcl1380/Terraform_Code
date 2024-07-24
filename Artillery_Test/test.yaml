@@ -1,0 +1,83 @@
+config:
+  target: "http://3.37.218.114"
+  phases:
+    - duration: 180  # 3 minutes
+      arrivalRate: 10  # 원활 상황
+      name: "Normal load"
+    - duration: 180  # 3 minutes
+      arrivalRate: 50  # 과부하 상황
+      name: "High load"
+    - duration: 180  # 3 minutes
+      arrivalRate: 100  # 터지는 상황
+      name: "Stress load"
+
+scenarios:
+  - name: "User Sign Up and Login"
+    # 사용자 회원가입 및 로그인 시나리오
+    flow:
+      - post:
+          url: "/users/signup"
+          json:
+            username: "${username}"
+            password: "${password}"
+      - post:
+          url: "/users/login"
+          json:
+            username: "${username}"
+            password: "${password}"
+
+  - name: "Manage Products"
+    # 제품 관리 시나리오
+    flow:
+      - get:
+          url: "/products"
+          # 모든 제품 조회
+      - get:
+          url: "/products/paginated"
+          qs:
+            page: ${randomInt(0, 10)}
+            size: ${randomInt(1, 20)}
+          # 페이지네이션된 제품 목록 조회
+      - post:
+          url: "/products"
+          json:
+            name: "Product ${randomInt(1, 10000)}"
+            price: ${randomInt(10, 1000)}
+          # 새로운 제품 생성
+      - get:
+          url: "/products/${productId}"
+          # 제품 ID로 조회
+      - put:
+          url: "/products/${productId}"
+          json:
+            name: "Updated Product ${randomInt(1, 10000)}"
+            price: ${randomInt(10, 1000)}
+          # 제품 ID로 업데이트
+      - delete:
+          url: "/products/${productId}"
+          # 제품 ID로 삭제
+
+  - name: "Thymeleaf Pages"
+    # Thymeleaf 템플릿 페이지 시나리오
+    flow:
+      - get:
+          url: "/products-temp/thymeleaf/ex01"
+          # Thymeleaf 예제 페이지 조회
+      - get:
+          url: "/products-temp/thymeleaf/products-page"
+          # 제품 페이지 조회
+      - get:
+          url: "/products-temp/products-layout"
+          # 제품 레이아웃 페이지 조회
+      - get:
+          url: "/products-temp/products-pagenav"
+          # 제품 페이지 네비게이션 조회
+    
+  - name: "Create Dummy Products"
+    # 더미 제품 생성 시나리오
+    flow:
+      - get:
+          url: "/products/make-dummy"
+          qs:
+            count: ${randomInt(1, 100)}
+          # 지정된 수의 더미 제품 생성

@@ -16,6 +16,13 @@ resource "aws_security_group" "default" {
     cidr_blocks = ["0.0.0.0/0"] 
   }
 
+  ingress { // Grafana 외부 접속 용도
+    from_port   = 3000
+    to_port     = 3000
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"] 
+  }
+
   ingress { // SSH 22 -> 51228로 수정
     from_port   = 51228
     to_port     = 51228
@@ -105,6 +112,14 @@ resource "aws_security_group" "private" {
     to_port     = 8080
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"] 
+  }
+
+  ingress {
+    from_port   = 3000
+    to_port     = 3000
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"] 
+    // security_groups = [aws_security_group.default.id]  # Nginx가 위치한 default 보안 그룹에서의 접근 허용
   }
 
   ingress { // MySQL 포트 3306 개방
