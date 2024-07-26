@@ -1,24 +1,24 @@
 // 가용영역 a의 DB는 Ubuntu 인스턴스 내에 MySQL 설정하여 연동
 // 옵션에 -y 부여해야 하는지 아닌지 잘 보기 !!!!
 
-resource "aws_instance" "jenkins" {
+resource "aws_instance" "bastion" {
   // Ubuntu 24.04 -> 22.04로 교체
   ami           = "ami-056a29f2eddc40520"
   instance_type = "t2.medium"
   subnet_id     = aws_subnet.Public_A1.id
   key_name      = "KDT_Project2_AWS"
 
-  vpc_security_group_ids = [aws_security_group.jenkins.id]
+  vpc_security_group_ids = [aws_security_group.bastion.id]
 
   tags = {
-    Name = "Jenkins_Instance"
+    Name = "Bastion_Instance"
   }
 
   user_data = <<-EOF
               #!/bin/bash
               # 호스트 이름 변경
-              hostnamectl set-hostname jenkins-instance
-              echo "127.0.1.1 jenkins-instance" >> /etc/hosts
+              hostnamectl set-hostname Bastion-instance
+              echo "127.0.1.1 Bastion-instance" >> /etc/hosts
 
               # PEM 파일 생성 및 권한 설정
               echo "${var.key_pair_content}" > /home/ubuntu/KDT_Project2_AWS.pem
@@ -67,12 +67,38 @@ resource "aws_instance" "jenkins" {
               EOF
 }
 
-resource "aws_eip" "jenkins_eip" {
-  instance = aws_instance.jenkins.id
+resource "aws_eip" "bastion_eip" {
+  instance = aws_instance.bastion.id
   vpc      = true
 }
 
+# -----------Logging & Grafana-----------------------
 
+resource "aws_instance" "Logging" { // 로깅 서버
+  ami           = "ami-056a29f2eddc40520"
+  instance_type = "t2.medium"
+  subnet_id     = aws_subnet.Public_A1.id
+  key_name      = "KDT_Project2_AWS"
+
+  vpc_security_group_ids = [aws_security_group.public.id]
+
+  tags = {
+    Name = "Logging"
+  }
+
+  user_data = <<-EOF
+              #!/bin/bash
+              # 호스트 이름 변경
+              hostnamectl set-hostname a-logging
+              echo "127.0.2.1 a-logging" >> /etc/hosts
+
+              # PEM 파일 생성 및 권한 설정
+              echo "${var.key_pair_content}" > /home/ubuntu/KDT_Project2_AWS.pem
+              chmod 444 /home/ubuntu/KDT_Project2_AWS.pem
+              echo "PEM 파일 생성 및 권한 설정 성공!" 
+
+              EOF
+}
 
 /*------------------------------------------------------------------------------*/
 
@@ -84,7 +110,7 @@ resource "aws_instance" "A_Public" {
   subnet_id     = aws_subnet.Public_A1.id
   key_name      = "KDT_Project2_AWS"
 
-  vpc_security_group_ids = [aws_security_group.default.id]
+  vpc_security_group_ids = [aws_security_group.public.id]
 
   tags = {
     Name = "A_Public"
@@ -184,32 +210,6 @@ resource "aws_instance" "A_Private02" {
               # 호스트 이름 변경
               hostnamectl set-hostname a-private02
               echo "127.0.2.1 a-private02" >> /etc/hosts
-
-              # PEM 파일 생성 및 권한 설정
-              echo "${var.key_pair_content}" > /home/ubuntu/KDT_Project2_AWS.pem
-              chmod 444 /home/ubuntu/KDT_Project2_AWS.pem
-              echo "PEM 파일 생성 및 권한 설정 성공!" 
-
-              EOF
-}
-
-resource "aws_instance" "A_Logging" { // 로깅 서버
-  ami           = "ami-056a29f2eddc40520"
-  instance_type = "t2.medium"
-  subnet_id     = aws_subnet.Private_A2.id
-  key_name      = "KDT_Project2_AWS"
-
-  vpc_security_group_ids = [aws_security_group.private.id]
-
-  tags = {
-    Name = "A_Logging"
-  }
-
-  user_data = <<-EOF
-              #!/bin/bash
-              # 호스트 이름 변경
-              hostnamectl set-hostname a-logging
-              echo "127.0.2.1 a-logging" >> /etc/hosts
 
               # PEM 파일 생성 및 권한 설정
               echo "${var.key_pair_content}" > /home/ubuntu/KDT_Project2_AWS.pem

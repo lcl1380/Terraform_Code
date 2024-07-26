@@ -1,5 +1,5 @@
 // 기본 보안 그룹 생성 및 수정
-resource "aws_security_group" "default" {
+resource "aws_security_group" "public" {
   vpc_id = aws_vpc.KDT_Project2.id
 
   ingress { // HTTP 포트 80 개방
@@ -16,9 +16,16 @@ resource "aws_security_group" "default" {
     cidr_blocks = ["0.0.0.0/0"] 
   }
 
-  ingress { // Grafana 외부 접속 용도
+  ingress { // Grafana
     from_port   = 3000
     to_port     = 3000
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"] 
+  }
+
+    ingress { // Grafana - mailing
+    from_port   = 587
+    to_port     = 587
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"] 
   }
@@ -39,7 +46,7 @@ resource "aws_security_group" "default" {
   }
 
   tags = {
-    Name = "default"
+    Name = "public"
   }
 }
 
@@ -48,7 +55,7 @@ resource "aws_security_group" "default" {
 
 
 // Jenkins용 보안 그룹 생성
-resource "aws_security_group" "jenkins" {
+resource "aws_security_group" "bastion" {
   vpc_id = aws_vpc.KDT_Project2.id
 
   ingress { // SSH 포트 22 개방
@@ -114,12 +121,11 @@ resource "aws_security_group" "private" {
     cidr_blocks = ["0.0.0.0/0"] 
   }
 
-  ingress {
-    from_port   = 3000
-    to_port     = 3000
+    ingress { // Prometheus
+    from_port   = 9090
+    to_port     = 9090
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"] 
-    // security_groups = [aws_security_group.default.id]  # Nginx가 위치한 default 보안 그룹에서의 접근 허용
+    security_groups = [aws_security_group.public.id]  # Nginx가 위치한 public 보안 그룹에서의 접근 허용
   }
 
   ingress { // MySQL 포트 3306 개방
@@ -149,11 +155,11 @@ resource "aws_security_group" "private" {
 resource "aws_security_group" "db" {
   vpc_id = aws_vpc.KDT_Project2.id
 
-  ingress { // Private-SecurityGroup과 Default-SecurityGroup으로부터의 MySQL 포트 3306 개방
+  ingress { // Private-SecurityGroup과 public-SecurityGroup으로부터의 MySQL 포트 3306 개방
     from_port   = 3306
     to_port     = 3306
     protocol    = "tcp"
-    security_groups = [aws_security_group.private.id, aws_security_group.default.id]
+    security_groups = [aws_security_group.private.id, aws_security_group.public.id]
   }
 
   ingress { // SSH 포트 22 개방 -> Setting 용도.

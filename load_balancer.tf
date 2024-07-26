@@ -3,7 +3,7 @@ resource "aws_lb" "KDT_LoadBalancer" {
   name               = "KDT-LoadBalancer"
   internal           = false
   load_balancer_type = "application"
-  security_groups    = [aws_security_group.default.id]
+  security_groups    = [aws_security_group.public.id]
   subnets            = [aws_subnet.Public_A1.id, aws_subnet.Public_B1.id]
 
   enable_deletion_protection = false

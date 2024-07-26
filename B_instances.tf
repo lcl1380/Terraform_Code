@@ -6,7 +6,7 @@ resource "aws_instance" "B_Public" {
   subnet_id     = aws_subnet.Public_B1.id
   key_name      = "KDT_Project2_AWS"
 
-  vpc_security_group_ids = [aws_security_group.default.id]
+  vpc_security_group_ids = [aws_security_group.public.id]
 
   tags = {
     Name = "B_Public"
